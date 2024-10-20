@@ -7,7 +7,7 @@ codeunit 50100 B2C
 {
     trigger OnRun()
     begin
-        B2C('254726286849', 10);
+       
     end;
 
     Procedure GetAccessToken(): Text
@@ -83,8 +83,6 @@ codeunit 50100 B2C
         GeneralLedgerSetup.TestField("CallBack Url");
         OriginatorConversationId:= NoSeries.GetNextNo(GeneralLedgerSetup."Conversation Ids");
         CallBackUrl := GeneralLedgerSetup."CallBack Url";
-        Recepient := '254726286849';
-        Amount := 10;
         url := '';
         Clear(JsonObj);
         url:= 'https://sandbox.safaricom.co.ke/mpesa/b2c/v3/paymentrequest';
